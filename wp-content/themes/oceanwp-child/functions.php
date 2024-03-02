@@ -22,3 +22,18 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+function ajouter_element_menu_admin($items, $args) {
+    // Vérifiez si l'utilisateur actuel est un administrateur
+    if (current_user_can('administrator')) {
+        // Ajoutez ici le code HTML de l'élément de menu pour les administrateurs
+        $element_menu = '<li><a href="http://localhost/planty/wp-admin/nav-menus.php">Admin</a></li>';
+
+        // Ajoutez l'élément à la fin du menu
+        $items .= $element_menu;
+    }
+
+    return $items;
+}
+
+// Ajoutez le filtre pour ajouter l'élément de menu
+add_filter('wp_nav_menu_items', 'ajouter_element_menu_admin', 10, 2);
