@@ -24,9 +24,9 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 // END ENQUEUE PARENT ACTION
 function ajouter_element_menu_admin($items, $args) {
     // Vérifiez si l'utilisateur actuel est un administrateur
-    if (current_user_can('administrator')) {
+    if (is_user_logged_in()) {
         // Ajoutez ici le code HTML de l'élément de menu pour les administrateurs
-        $element_menu = '<li><a href="http://localhost/planty/wp-admin/nav-menus.php">Admin</a></li>';
+        $element_menu = '<li><a href="'.admin_url().'">Admin</a></li>';
 
         // Ajoutez l'élément à la fin du menu
         $items .= $element_menu;
