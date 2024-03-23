@@ -25,15 +25,25 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 function ajouter_element_menu_admin($items, $args) {
     // Vérifiez si l'utilisateur actuel est un administrateur
     if (is_user_logged_in()) {
-        // Ajoutez ici le code HTML de l'élément de menu pour les administrateurs
+        // Code HTML de l'élément de menu pour les administrateurs
         $element_menu = '<li><a href="'.admin_url().'">Admin</a></li>';
 
-        // Ajoutez l'élément à la fin du menu
-        $items .= $element_menu;
+        // // Trouver la position de la première occurrence de "</li>"
+$pos = strpos($items, '</li>');
+
+// Insérer $element_menu juste après la première balise </li>
+if ($pos !== false) {
+    // Insérer $element_menu après la balise </li> trouvée
+    $items = substr_replace($items, $element_menu, $pos + strlen('</li>'), 0);
+} else {
+    // S'il n'y a pas de balise </li>, ajoutez simplement $element_menu à la fin
+    $items .= $element_menu;
+}
+
     }
 
     return $items;
 }
 
-// Ajoutez le filtre pour ajouter l'élément de menu
+// Rajouter le filtre pour ajouter l'élément de menu
 add_filter('wp_nav_menu_items', 'ajouter_element_menu_admin', 10, 2);

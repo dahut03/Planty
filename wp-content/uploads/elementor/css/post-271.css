@@ -1,0 +1,21 @@
+.elementor-271 .elementor-element.elementor-element-e807754{--display:flex;--background-transition:0.3s;}/* Start custom CSS for container, class: .elementor-element-e807754 *//* Pour les écrans plus petits */
+@media only screen and (max-width: 768px) {
+    .two-columns-form .row {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .two-columns-form .column {
+        width: 100%;
+    }
+}
+
+/* Pour les écrans plus grands */
+@media only screen and (min-width: 768px) {
+    .two-columns-form .row {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .two-columns-form .column {
+        width: 50%;
+    }
+}/* End custom CSS */

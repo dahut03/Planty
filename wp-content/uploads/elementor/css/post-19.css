@@ -19,7 +19,8 @@
 .elementor-kit-19 input[type="submit"],
 .elementor-kit-19 .elementor-button {
   background-color:#E0B9B4;
-
+  display: block;
+  margin: auto;
 }
 .elementor-kit-19 button:hover,
 .elementor-kit-19 button:focus,

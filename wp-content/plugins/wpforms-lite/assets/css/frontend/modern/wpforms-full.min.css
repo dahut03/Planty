@@ -482,7 +482,7 @@ body.rtl .ui-timepicker-list li {
 }
 .wpforms-container .wpforms-field {
   padding:15px 0;
-  position:relative
+  position:relative;
 }
 .wpforms-container .wpforms-field.wpforms-field-hidden {
   display:none;
@@ -692,7 +692,8 @@ body.rtl .ui-timepicker-list li {
 }
 .wpforms-container .wpforms-field {
   float:none;
-  clear:both
+  clear:both;
+  text-align: left;
 }
 .wpforms-container .wpforms-field.wpforms-five-sixths,
 .wpforms-container .wpforms-field.wpforms-four-sixths,

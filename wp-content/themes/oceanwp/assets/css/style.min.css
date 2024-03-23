@@ -1554,19 +1554,18 @@ form input[type=color],
 form select,
 form textarea {
   display:inline-block;
-  min-height:40px;
+  min-height:57px;
   width:100%;
   font-size:14px;
   line-height:1.8;
   padding:6px 12px;
   vertical-align:middle;
-  background-color:rgba(0,0,0,0);
   color:#333;
   border:1px solid #ddd;
   -webkit-border-radius:3px;
   -moz-border-radius:3px;
   -ms-border-radius:3px;
-  border-radius:3px;
+  border-radius:7px;
   -webkit-transition:all .3s ease;
   -moz-transition:all .3s ease;
   -ms-transition:all .3s ease;
@@ -4505,7 +4504,7 @@ body.vertical-header-style.vh-closed #site-header.vertical-header #site-navigati
 .effect-four #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:before,
 .effect-four #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:after {
   display:inline-block;
-  color:#13aff0;
+  color:#ffffff;
   opacity:0;
   -webkit-transition:all .25s ease-out;
   -moz-transition:all .25s ease-out;
